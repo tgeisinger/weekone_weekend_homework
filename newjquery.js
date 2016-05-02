@@ -68,14 +68,15 @@ $(document).ready(function() {
                 if (array[i].key == key) {
                     array.splice(i, 1);
                 }
+
             }
 
             var parent = $(deleteBtn).parent();
 
             $(parent).remove()
-
-
-
+            var minus = calTotalSalaries(array);
+            minus = Math.round(minus / 12);
+            $('#monthly').text(minus);
 
 
         });
@@ -93,7 +94,7 @@ $(document).ready(function() {
 
 
 
-    };
+    }
 
 
 });
